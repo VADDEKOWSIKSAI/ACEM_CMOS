@@ -1,6 +1,6 @@
-# 🍔 ACEM-CMOS (College Cafeteria Management System)
+# 📚 ACEM-CMOS (Course Material Ordering System)
 
-A full-stack web application for managing college cafeteria orders, designed to streamline the food ordering process for students and administration.
+A full-stack web application for managing course material orders, designed to streamline the material ordering process for students and administration.
 
 ![Project Status](https://img.shields.io/badge/status-live-success)
 ![Vercel](https://img.shields.io/badge/frontend-vercel-black)
@@ -14,15 +14,15 @@ A full-stack web application for managing college cafeteria orders, designed to 
 ## ✨ Features
 
 ### 👨‍🎓 Student Panel
-- **Browse Menu**: View available food items with images and prices.
+- **Browse Materials**: View available course materials with images and prices.
 - **Cart Management**: Add items to cart and review orders.
 - **Order Placement**: Place orders using "Cash on Delivery" or "Online Payment".
 - **Order History**: Track status of past orders (Pending, Ready, Completed).
 
 ### 👨‍💼 Admin Panel
-- **Manage Menu**: Add, update, or remove food items (including image URLs).
+- **Manage Materials**: Add, update, or remove materials (including image URLs).
 - **Order Management**: View incoming orders and update their status (e.g., mark as "Ready" or "Delivered").
-- **Dashboard**: Overview of cafeteria operations.
+- **Dashboard**: Overview of system operations.
 
 ## 🛠️ Tech Stack
 
