@@ -74,11 +74,11 @@ The frontend will start at `http://localhost:5173`.
 **Backend (Railway Variables)**
 - `JWT_SECRET`: (Secure 256-bit key)
 - `JWT_EXPIRATION`: `86400000`
-- `MYSQL_URL`: (Auto-configured by Railway)
+- `MYSQL_URL`, `MYSQLUSER`, `MYSQLPASSWORD`: (Auto-configured by Railway)
 
 **Frontend (Vercel Environment Variables)**
-- `VITE_API_BASE_URL`: `https://acemcmos-production.up.railway.app/api`
-- `VITE_IMAGE_BASE_URL`: `https://acemcmos-production.up.railway.app`
+- `VITE_API_BASE_URL`: `https://<YOUR_DEPLOYED_BACKEND_URL>/api`
+- `VITE_IMAGE_BASE_URL`: `https://<YOUR_DEPLOYED_BACKEND_URL>`
 
 ## 🤝 Contributing
 Contributions are welcome! Please fork the repository and submit a pull request.
