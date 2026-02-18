@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply text-slate-900 antialiased;
+        background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 50%, #ccfbf1 100%);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        min-height: 100vh;
+    }
+
+    .dark body {
+        @apply text-night-text-primary bg-night-bg;
+        /* Cosmic Radial Gradient: Glowing top/center, fading to deep void at bottom */
+        background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #030510 60%);
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        /* Parallax-like feel */
+    }
+
+    /* Smooth transitions for all interactive elements */
+    button,
+    a,
+    input,
+    select {
+        @apply transition-all duration-300 ease-in-out;
+    }
+}
+
+@layer utilities {
+    .glass {
+        @apply bg-white/30 backdrop-blur-lg border border-white/20 shadow-xl;
+    }
+
+    .dark .glass {
+        @apply bg-night-surface border-night-border;
+    }
+
+    .glass-card {
+        @apply bg-white/40 backdrop-blur-xl border border-white/40 shadow-xl rounded-2xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:bg-white/50;
+    }
+
+    .dark .glass-card {
+        @apply bg-night-surface backdrop-blur-2xl border-night-border hover:bg-white/5 hover:shadow-violet-500/20 hover:border-violet-500/30;
+    }
+
+    .glass-input {
+        @apply bg-white/50 border border-white/30 backdrop-blur-sm rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:bg-white/80 transition-all placeholder-gray-400 text-gray-800;
+    }
+
+    .dark .glass-input {
+        @apply bg-night-surface backdrop-blur-xl border-night-border text-white placeholder-gray-400 focus:bg-white/10 focus:ring-indigo-400;
+        color-scheme: dark;
+        /* This helps with native browser elements */
+    }
+
+    .dark .glass-input option {
+        @apply bg-[#0f172a] text-white;
+        /* Using a solid dark color to ensure visibility */
+    }
+
+    .glass-btn {
+        @apply bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg shadow-fuchsia-900/20 hover:shadow-fuchsia-600/40 transform hover:-translate-y-0.5 transition-all duration-200 border border-white/10;
+    }
+
+    .dark .glass-btn {
+        @apply shadow-indigo-900/30 hover:shadow-indigo-800/50;
+    }
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.3);
+    border-radius: 4px;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-left {
+    animation: slideLeft 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
